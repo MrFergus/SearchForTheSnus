@@ -1,0 +1,79 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+void main()
+{
+	string name;
+	string egenskaper;
+	string choice;
+	cout << "What is the real name of the famous Grabben?" << endl;
+	getline(cin, name);
+	if (name == "viktor rehn")
+	{
+
+		cout << "Well, congrats. You're not completely retarded, like Grabben." << endl;
+
+
+	}
+	
+	else if (name != "viktor rehn")
+	{
+
+		cout << "You're worse than Grabben, you should feel bad about yourself." << endl;
+	}
+
+
+	cout << "Is Grabben perfect and beautiful?" << endl;
+	cout << "Yes or no" << endl;
+	cin >> choice;
+
+	if (choice == "yes")
+	{
+		cout << "Seriously? Have you seen him?" << endl;
+
+
+
+
+	}
+
+	else if (choice == "no")
+	{
+		cout << "At least it seems your taste is to be trusted." << endl;
+
+
+
+
+	}
+
+	cout << "Is Grabben circumsized or does he just have a micro penis?" << endl;
+	cin >> egenskaper;
+
+	if (egenskaper == "micro penis""circumsized")
+	{
+		cout << "Hah, that was actually a trick question!! HE GOT BOTH, HE HAS A CIRCUMSIZED MICRO PENIS!" << endl;
+		cout << "I'll give you a point for that one though, not a lot of people actually knows that as no one wants to have sex with him." << endl;
+
+
+	}
+	else if (egenskaper == "a circumsized micro penis")
+	{
+		cout << "Well you're a fucking confirmed genius" << endl;
+
+
+	}
+
+	else
+	{
+		cout << "That's not even an option, cunt." << endl;
+
+
+	}
+
+	system("pause");
+		
+
+	 
+}
