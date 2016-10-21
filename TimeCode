@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <time.h>
+#include <Windows.h>
+using namespace std;
+
+
+int clock(int countdown=10)
+{
+	for (countdown; countdown >= 1; time--)
+	{
+		cout << countdown << endl;
+		Sleep(1000);
+
+		return c;
+	}
+
+}
+
+void main()
+
