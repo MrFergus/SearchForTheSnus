@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include <iostream>
+#include <stdio.h>
 #include <string>
+#include <windows.h>
 using namespace std;
 
 int correct = 0;
@@ -18,7 +20,7 @@ void main()
 
 		cout << "Well, congrats. You're not completely retarded, like Grabben." << endl;
 
-		correct=correct + 1;
+		correct = correct + 1;
 
 
 	}
@@ -45,7 +47,7 @@ void main()
 	{
 		cout << "At least it seems your taste is to be trusted." << endl;
 
-		correct=correct + 1;
+		correct = correct + 1;
 	}
 
 	else
@@ -54,37 +56,52 @@ void main()
 
 
 	}
-	
+
 	system("pause");
 	system("cls");
 
-	cout << "Is Grabben circumsized or does he just have a micro penis?" << endl;
-	cin >> egenskaper;
-	getline(cin, egenskaper);
+	cout << "Is Grabben a) circumsized or does he have a b) micro penis?" << endl;
 
-	if (egenskaper == "micro penis""circumsized")
+	cin >> egenskaper;
+
+	if (egenskaper == "a" || egenskaper == "A")
+	
 	{
 		cout << "Hah, that was actually a trick question!! HE GOT BOTH, HE HAS A CIRCUMSIZED MICRO PENIS!" << endl;
 		cout << "I'll give you a point for that one though, not a lot of people actually knows that as no one wants to have sex with him." << endl;
 
-		correct=correct + 1;
+		correct = correct + 1;
 	}
-	else if (egenskaper == "a circumsized micro penis")
+
+
+
+	else if (egenskaper == "b" || egenskaper == "B" )
+	{
+		cout << "Hah, that was actually a trick question!! HE GOT BOTH, HE HAS A CIRCUMSIZED MICRO PENIS!" << endl;
+		cout << "I'll give you a point for that one though, not a lot of people actually knows that as no one wants to have sex with him." << endl;
+
+		correct = correct + 1;
+	}
+
+
+
+	else if (egenskaper == "ab" || egenskaper == "AB")
 	{
 		cout << "Well you're a fucking genius" << endl;
-		correct=correct + 1;
+		correct = correct + 1;
 	}
 
-	else
-	{
-		cout << "That's not even an option, cunt." << endl;
-
-	}
-	cout << "Give me a moment to check your results" << endl;
+	else cout << "That's not even an option, cunt." << endl;  
 	
+
+
+		
+
+	cout << "Give me a moment to check your results" << endl;
+
 	system("pause");
 	system("cls");
-	
+
 	if (correct > 1)
 	{
 		cout << "You're amazing btw!" << endl;
@@ -98,7 +115,7 @@ void main()
 		cout << "ARE" << endl;
 		cout << "USELESSS!!!" << endl;
 	}
-	else if (correct)
+	else if (correct == 3)
 	{
 		cout << "I like you, you are everything Grabben isn't." << endl;
 		cout << "You're both beautiful and useful, two traits that Grabben needs to become a decent human being." << endl;
