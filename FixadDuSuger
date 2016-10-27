@@ -1,0 +1,172 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+
+int rockPaperSiccors();
+
+
+
+
+int main() {
+	int input;
+	cout << "1.Play game\n";
+	cin >> input;
+	switch (input) {
+	case 1:
+
+
+		cout << "Welcome to the text based adventure." << endl;
+		cout << "Game made by Luka, Joel, Adrian, Martin and Klara." << endl;
+		cout << "You playing as Grabben to find the ultimate snus in Stockholm." << endl;
+		cout << "But Grabben is only 17 years old so you have to get the snus by battling the tabaccostore in minigames." << endl;
+		cout << "Start by choosing a destination to go to." << endl;
+		cout << "Have fun!" << endl;
+	}
+
+
+	system("pause");
+	system("cls");
+
+
+	int input2;
+
+	cout << "1.Go to Mom’s basement\n";
+	cout << "2.Go to Mattesalen\n";
+	cout << "3.Go to Lukas hak(kors)\n";
+	cout << "4.Go to Snus art online\n";
+	cout << "5.Go to Kafe 44\n";
+	cout << "6.Go to Brony land\n";
+	cout << "7.Go to \n";
+	cout << "8.Go to \n";
+	cin >> input2;
+	switch (input2) {
+	case 1: {
+		cout << "Welcome to Mom's basement" << endl;
+
+		break;
+	}
+	case 2: {
+		cout << "Welcome to Mattesalen" << endl;
+		break;
+
+	}
+	case 3: {
+		cout << "Welcome to Lukas hak(kors)" << endl;
+		int input;
+		cout << "You will now play rock, paper, scissors against Lukas. If you win this match you will get SIBERIA SNUS!" << endl;
+		cout << "press 1 to start game!" << endl;
+		int play;
+		cin >> play;
+
+
+		if (play == 1)
+		{
+			rockPaperSiccors();
+		}
+		system("pause");
+		return 0;
+		break;
+
+
+	}
+	case 4: {
+		cout << "Welcome to Snus art online" << endl;
+		break;
+	}
+	case 5: {
+		cout << "Welcome to kafe 44" << endl;
+		break;
+	}
+	case 6: {
+		cout << "Welcome to Brony land" << endl;
+		break;
+	}
+
+			system("pause");
+
+}
+
+
+
+int rockPaperSiccors();
+{
+	int R = 1;
+	int P = 2;
+	int S = 3;
+	int i;
+	int Pscore = 0;
+	int Cscore = 0;
+	int choice;
+	srand(time(NULL));
+	cout << "Rock=1 , Paper= 2, and Scissors= 3\n";
+
+
+	for (i = 0; i < 5; i++) {
+		cout << "Enter your choice:";
+		cin >> choice;
+		int computer = rand() % 3 + 1;
+		if (choice == 1) {
+			if (computer == 1) {
+				cout << "Draw\n";
+			}
+			if (computer == 2) {
+				cout << "Computer Wins!\n";
+				Cscore = Cscore + 1;
+			}
+			if (computer == 3) {
+				cout << "Player Wins\n";
+				Pscore = Pscore + 1;
+			}
+		}
+		else  if (choice == 2) {
+			if (computer == 2) {
+				cout << "Draw\n";
+			}
+			if (computer == 3) {
+				cout << "Player Wins!\n";
+				Pscore = Pscore + 1;
+			}
+			if (computer == 1) {
+				cout << "Computer Wins!\n";
+				Cscore = Cscore + 1;
+			}
+		}
+		else if (choice == 3) {
+			if (computer == 3) {
+				cout << "Draw\n";
+			}
+			if (computer == 2) {
+				cout << "Computer Wins!\n";
+				Cscore = Cscore + 1;
+			}
+			if (computer == 1) {
+				cout << "Player Wins!\n";
+				Pscore = Pscore + 1;
+
+
+			}
+		}
+		else {
+			cout << "Wrong Answer\n";
+		}
+
+
+	}
+	if (Cscore > Pscore) {
+		cout << "Computer wins" << Cscore << " to " << Pscore << endl;
+	}
+	else if (Cscore < Pscore) {
+		cout << "Player wins " << Pscore << " to " << Cscore << endl;
+	}
+	else if (Cscore = Pscore) {
+		cout << "No winner it is a draw!\n";
+
+
+		system("pause");
+		return 0;
+	}
+}
