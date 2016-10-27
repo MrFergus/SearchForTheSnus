@@ -1,0 +1,45 @@
+#include "stdafx.h"
+#include <stdio.h>
+#include <string>
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+bool riddleanswer;
+int score=0;
+string riddleinput;
+
+
+void main()
+{
+
+	cout << "When you add I get smaller" << endl << "When you remove I get bigger" << endl << "What am I?" << endl;
+
+	getline(cin, riddleinput);
+
+	if (riddleinput == "A negative number" || riddleinput == "negative number" || riddleinput == "negative" || riddleinput == "A negative" || riddleinput == "Negative number" || riddleinput == "Negative") riddleanswer = true;
+
+
+	else riddleanswer=false;
+
+
+
+
+	if (riddleanswer) cout << "You are correct, I admit defeat." << endl;
+
+	if (riddleanswer)
+	{
+
+		score = score + 1;
+
+
+	}
+
+	else cout << "Not even close, I knew you did not have what it takes" << endl;
+
+
+
+
+	system("Pause");
+
+}
