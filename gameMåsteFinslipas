@@ -1,0 +1,358 @@
+// ConsoleApplication3.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <windows.h>
+using namespace std;
+
+int riddle();
+int rockPaperSiccors();
+int android();
+int grabben();
+int correct = 0;
+string name;
+string egenskaper;
+string choice;
+bool riddleanswer;
+string riddleinput;
+
+
+
+
+int main() {
+	int input;
+	cout << "1.Play game\n";
+	cin >> input;
+	switch (input) {
+	case 1:
+
+
+		cout << "Welcome to the text based adventure." << endl;
+		cout << "Game made by Luka, Joel, Adrian, Martin and Klara." << endl;
+		cout << "You playing as Grabben to find the ultimate snus in Stockholm." << endl;
+		cout << "But Grabben is only 17 years old so you have to get the snus by battling the tabaccostore in minigames." << endl;
+		cout << "Start by choosing a destination to go to." << endl;
+		cout << "Have fun!" << endl;
+	}
+
+
+	system("pause");
+	system("cls");
+
+
+	int input2;
+
+	cout << "1.Go to Mom’s basement\n";
+	cout << "2.Go to Mattesalen\n";
+	cout << "3.Go to Lukas hak(kors)\n";
+	cout << "4.Go to Snus art online\n";
+	cout << "5.Go to Kafe 44\n";
+	cout << "6.Go to Brony land\n";
+	cout << "7.Go to \n";
+	cout << "8.Go to \n";
+	cin >> input2;
+	switch (input2) {
+	case 1: {
+		cout << "Welcome to Mom's basement" << endl;
+		cout << "Here you will get the chance to get Fuckboy's Rapé" << endl;
+		cout << "Are you ready? Press 1 to start" << endl;
+		int play;
+		cin >> play;
+
+
+		if (play == 1)
+		{
+			android();
+		}
+					
+		system("pause");
+		return 0;
+		break;
+	}
+	case 2: {
+		cout << "Welcome to Mattesalen" << endl;
+		break;
+
+	}
+	case 3: {
+		cout << "Welcome to Lukas hak(kors)" << endl;
+		cout << "You will now play rock, paper, scissors against Lukas. If you win this match you will get SIBERIA SNUS!" << endl;
+		cout << "press 1 to start game!" << endl;
+		int play;
+		cin >> play;
+
+
+		if (play == 1)
+		{
+			rockPaperSiccors();
+		}
+		system("pause");
+		return 0;
+		break;
+
+
+	}
+	case 4: {
+		cout << "Welcome to Sebbe’s amigos" << endl;
+		cout << "So do you want some of Sebbe's Sweat?" << endl;
+		cout << "Then you have to answer a quiz about Grabben" << endl;
+		cout << "Let's go! Press 1 to start"<< endl;
+		int play;
+		cin >> play;
+
+		if (play == 1)
+		{
+			grabben();
+		}
+		system("pause");
+		return 0;
+
+
+		break;
+	}
+	case 5: {
+		cout << "Welcome to kafe 44" << endl;
+		cout << "Are you ready for a riddle?" << endl;
+		cout << "If you get this right you will get Gurras punkportion" << endl;
+		cout << "press 1 to start" << endl;
+		int play;
+		cin >> play;
+
+		if (play == 1)
+		{
+			riddle();
+		}
+
+		system("pause");
+		return 0;
+		break;
+	}
+	case 6: {
+		cout << "Welcome to Brony land" << endl;
+		break;
+	}
+
+			system("pause");
+
+	}
+}
+
+
+int rockPaperSiccors() {
+
+	int R = 1;
+	int P = 2;
+	int S = 3;
+	int i;
+	int Pscore = 0;
+	int Cscore = 0;
+	int choice;
+	srand(time(NULL));
+	cout << "Rock=1 , Paper= 2, and Scissors= 3\n";
+
+	for (i = 0; i<5; i++) {
+		cout << "Enter your choice:";
+		cin >> choice;
+		int computer = rand() % 3 + 1;
+		if (choice == 1) {
+			if (computer == 1) {
+				cout << "Draw\n";
+			}
+			if (computer == 2) {
+				cout << "Computer Wins!\n";
+				Cscore = Cscore + 1;
+			}
+			if (computer == 3) {
+				cout << "Player Wins\n";
+				Pscore = Pscore + 1;
+			}
+		}
+		else  if (choice == 2) {
+			if (computer == 2) {
+				cout << "Draw\n";
+			}
+			if (computer == 3) {
+				cout << "Player Wins!\n";
+				Pscore = Pscore + 1;
+			}
+			if (computer == 1) {
+				cout << "Computer Wins!\n";
+				Cscore = Cscore + 1;
+			}
+		}
+		else if (choice == 3) {
+			if (computer == 3) {
+				cout << "Draw\n";
+			}
+			if (computer == 2) {
+				cout << "Computer Wins!\n";
+				Cscore = Cscore + 1;
+			}
+			if (computer == 1) {
+				cout << "Player Wins!\n";
+				Pscore = Pscore + 1;
+
+			}
+		}
+		else {
+			cout << "Wrong Answer\n";
+		}
+
+	}
+	if (Cscore > Pscore) {
+		cout << "Computer wins" << Cscore << " to " << Pscore << endl;
+	}
+	else if (Cscore < Pscore) {
+		cout << "Player wins " << Pscore << " to " << Cscore << endl;
+	}
+	else if (Cscore = Pscore) {
+		cout << "No winner it is a draw!\n";
+	}
+
+	system("pause");
+	return 0;
+}
+
+int grabben()
+{
+
+	cout << "What is the real name of the famous Grabben?" << endl;
+	getline(cin, name);
+	if (name == "viktor rehn")
+	{
+
+		cout << "Well, congrats. You're not completely retarded, like Grabben." << endl;
+
+		correct = correct + 1;
+
+
+	}
+
+	else if (name != "viktor rehn")
+	{
+
+		cout << "You're worse than Grabben, you should feel bad about yourself." << endl;
+	}
+
+	system("pause");
+	system("cls");
+
+	cout << "Is Grabben perfect and beautiful?" << endl;
+	cout << "Yes or no" << endl;
+	cin >> choice;
+
+	if (choice == "yes")
+	{
+		cout << "Seriously? Have you seen him?" << endl;
+	}
+
+	else if (choice == "no")
+	{
+		cout << "At least it seems your taste is to be trusted." << endl;
+
+		correct = correct + 1;
+	}
+
+	else
+	{
+		cout << "That isn't even an option" << endl;
+
+
+	}
+
+	system("pause");
+	system("cls");
+
+	cout << "Is Grabben circumsized or does he just have a micro penis?" << endl;
+	cin >> egenskaper;
+	getline(cin, egenskaper);
+
+	if (egenskaper == "micro penis""circumsized")
+	{
+		cout << "Hah, that was actually a trick question!! HE GOT BOTH, HE HAS A CIRCUMSIZED MICRO PENIS!" << endl;
+		cout << "I'll give you a point for that one though, not a lot of people actually knows that as no one wants to have sex with him." << endl;
+
+		correct = correct + 1;
+	}
+	else if (egenskaper == "a circumsized micro penis")
+	{
+		cout << "Well you're a fucking genius" << endl;
+		correct = correct + 1;
+	}
+
+	else
+	{
+		cout << "That's not even an option, cunt." << endl;
+
+	}
+	cout << "Give me a moment to check your results" << endl;
+
+	system("pause");
+	system("cls");
+
+	if (correct > 1)
+	{
+		cout << "You're amazing btw!" << endl;
+	}
+
+	else if (correct <= 1)
+	{
+		cout << "Well, I'm sorry to break it to you." << endl;
+		cout << "But you're litteraly the most useless person I've ever met." << endl;
+		cout << "YOU" << endl;
+		cout << "ARE" << endl;
+		cout << "USELESSS!!!" << endl;
+	}
+	else if (correct)
+	{
+		cout << "I like you, you are everything Grabben isn't." << endl;
+		cout << "You're both beautiful and useful, two traits that Grabben needs to become a decent human being." << endl;
+	}
+
+	return 0;
+	system("pause");
+}
+
+int android()
+{
+	string str;
+	do {
+		cout << "android or iphone?" << endl;
+		getline(cin, str);
+	} while (str != "android");
+	cout << "that's right my nigga" << endl;
+
+	system("pause");
+	return 0;
+}
+
+int riddle()
+{
+
+	cout << "When you add I get smaller" << endl << "When you remove I get bigger" << endl << "What am I?" << endl;
+
+	cin >> riddleinput;
+	
+	getline(cin, riddleinput);
+
+	if (riddleinput == "A negative number" || riddleinput == "negative number" || riddleinput == "a negative number" || riddleinput == "A negative" || riddleinput == "Negative number" || riddleinput == "A Negative number") riddleanswer = true;
+
+
+	else riddleanswer = false;
+
+
+
+
+	if (riddleanswer) cout << "You are correct, I admit defeat." << endl;
+
+	else cout << "Not even close, the answer is A negative number doofus" << endl;
+
+
+	system("Pause");
+	return 0;
+}
