@@ -17,7 +17,7 @@ void main()
 
 	getline(cin, riddleinput);
 
-	if (riddleinput == "A negative number" || riddleinput == "negative number" || riddleinput == "negative" || riddleinput == "A negative" || riddleinput == "Negative number" || riddleinput == "Negative") riddleanswer = true;
+	if (riddleinput == "A negative number" || riddleinput == "negative number" || riddleinput == "a negative number" || riddleinput == "A negative" || riddleinput == "Negative number" || riddleinput == "A Negative number") riddleanswer = true;
 
 
 	else riddleanswer=false;
@@ -27,17 +27,7 @@ void main()
 
 	if (riddleanswer) cout << "You are correct, I admit defeat." << endl;
 
-	if (riddleanswer)
-	{
-
-		score = score + 1;
-
-
-	}
-
-	else cout << "Not even close, I knew you did not have what it takes" << endl;
-
-
+	else cout << "Not even close, the answer is A negative number doofus" << endl;
 
 
 	system("Pause");
